@@ -70,13 +70,13 @@ p {
 }
 img{border:none;max-width:100%; height:auto;}
 ul{
-	padding: 0;
     margin: 0 auto;
     list-style: none;
+    padding: 0;
 }
 ul li {
-	list-style: none;
-	
+	list-style: circle;
+    list-style-position: inside;
 }
 select,input,textarea,button{box-shadow:none;outline:0!important;}
 button {background: transparent;border: 0;}
@@ -285,7 +285,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #78A2CC;}
         4.  About
 --------------------------------------*/
 .about {padding: 50px 0 100px;}
-.about-content {padding-top: 100px;}
+.about-content {padding-top: 50px;}
 /*.single-about-txt*/
 .single-about-txt h3 {
     font-size:18px;
@@ -293,11 +293,21 @@ nav.navbar.bootsnav .navbar-toggle i{color: #78A2CC;}
     text-transform: initial;
     line-height: 1.8;
 }
+.single-about-txt h4 {
+    font-size:18px;
+    color: #252a3d;
+    text-transform: initial;
+    line-height: 1.8;
+}
+.single-about-txt a {
+    color: #78A2CC;
+}
 .single-about-txt p {
     font-size: 16px;
     color: #3c4258;
-    padding: 35px 0 43px;
-    border-bottom: 1px solid #3c4258;
+    padding: 10px 0 10px;
+    text-align: justify;
+    border-bottom: 1px;/*solid #3c4258*/
 }
 .single-about-add-info {
     margin: 35px 0;
@@ -415,10 +425,10 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .skill-content{padding: 50px 0 80px;}
 .single-skill-content{padding-top: 100px;}
 .section-heading h2 {
-    font-size: 24px;
+    font-size: 40px;
     font-weight: 600;
     text-transform: uppercase;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
     border-bottom: 1px solid #e5ebf2;
 }
 .single-progress-txt {
@@ -841,8 +851,23 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     color: #888ea5;
     text-transform: capitalize;
     padding: 38px 0;
+    border-top: 1px solid #e5ebf2;
 }
 .hm-footer-copyright p a {color: #888ea5;}
+
+
+/*===============================
+    Place iframes
+===============================*/
+#left_iframe {
+  width: calc(50%);
+  height: calc(50%);
+}
+#right_iframe {
+  width: calc(50%);
+  height: calc(50%);
+}
+
 /*===============================
     Scroll Top
 ===============================*/
