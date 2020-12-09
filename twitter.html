@@ -114,7 +114,7 @@
 
 		<section id="intro" class="about">
 			<div class="section-heading text-center">
-				<h2>TWITTER</h2>
+				<h2 style="text-align:center;"> TWITTER</h2>
 			</div>
 			<div class="container">
 				<div class="about-content">
@@ -125,10 +125,155 @@
 								
 							</h3>
 							<p>
-								The topic of this analysis is the impact of Covid-19 on the European Aviation Industry. <br>
-								The analysis is done in two steps: firstly it is analysed the 2020 network evolution compared to 2019. Secondly, it is analysed how customers reacted to the cancellation of flights in Twitter. <br>
-								All the graphics have been designed prioritizing the user experience and the interactivity of them.
+								<br>
+								In this section, we want to evaluate how passengers have perceived the airline´s handling of the situation and to see if there is a temporal relationship with the network changes. To do so, we will analyze around 600.000 tweets directed to the top 10 airlines in Europe until October 2020.
+								<br>
+
+
+								<br>
+
 							</p>
+							<br>
+							<br>
+							<h2 style="text-align:center;">  TERMS FREQUENCY IN TWEETS OVER 2020</h2>
+
+							<p style="text-align:justify;">
+								
+
+								After cleaning all the tweets to stay with the relevant part, the first thing we want to discover is the expressions mostly used by the users every month. We want to see if there has been a significant change over the year 2020 and if these changes are connected in time with the observed changes in the flights' network. 
+								<br>
+								 Here we show our findings with two graphs, an interactive monthly wordcloud, and a monthly interactive bar chart. Both show the same data but we wanted to show it using these two visualizations. The wordcloud because it helps us better understand visually the changes over the months, and at the same time, the bar chart because it helps to quantify the relative frequency of the different terms.  <br>
+
+							
+
+
+							<h2 style="text-align:left;">
+
+							 <br>	
+
+						 	 <br>
+								WORDCLOUD<br>
+								
+							</h2>
+
+							<p style="text-align:center;">
+
+
+							<br>
+								<iframe width="1000" height="700" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~aviationcovideu/1.embed"></iframe>
+							<br
+
+							<h2 style="text-align:left;">
+
+							</p>
+
+							 <br>	
+
+						 	 <br>
+								BAR CHART
+								
+							</h2>
+
+							<p style="text-align:center;">
+
+							<br>
+								<iframe width="1000" height="700" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~aviationcovideu/3.embed"></iframe>
+							<br
+							</p>
+							<p style="text-align:justify;">
+								As the graphs show, in January and February, the most frequently used terms are "flight", "fly", "airport" or "time". These are words associated with the normal operation of flights. However, March is the turning point, the terms that start appearing for the first time among the most frequent ones are "cancel flight" y "flight cancel", which take the first position in terms of relative frequency. Other relevant terms that have increased their frequency in March are "customer service", "refund flight" and "change flight".  <br>
+
+								 <br>
+
+
+								In April is when we start seeing a big change in the most used words on Twitter. Firstly, we can see that the relative frequency of the top 20 expressions is quite higher than the rest of the months. This fact shows that in this month most of the tweets include these words ("change flight", "claim voucher", "provide information" or "voucher understand").
+
+								<br>
+
+								<br>
+								 For the months after April, we can still find these terms among the most common. Not to the same degree as in March or April, but expressions such as "pay", "refund" or "cancel flight" are repeated constantly over the year until October. 
+							<br>
+							</p>
+
+							<br>
+								<h2 style="text-align:center;">  TWEET'S CATEGORIES IDENTIFICATION</h2>
+							<br>
+							<br>	
+							<p style="text-align:justify;">
+
+						
+							<br>
+							<br>
+							In this part, we want to categorize the topic of every tweet. To do so we are going to use RoBERTa which is a pre-trained model built by Facebook that is used to predict categories based on the labels that the user inputs. RoBERTa has been built on top of BERT which is another pretraining model. More about RoBERTa can be found in this paper.  <a href="https://arxiv.org/abs/1907.11692"  target="_blank">Read the paper here.</a> 
+							<br>
+							You can try the result of our model by selecting a category in the following interactive table. When you select a category, it displays a random tweet related to the selected topic. 
+
+							<br>
+							<br>
+							
+							<iframe width="1000" height="500" frameborder="0" scrolling="no" src="https://randomtable.herokuapp.com/"></iframe>
+							<br>
+
+							 Once we have a label for the category of every tweet, we want to see how the distribution of these categories has changed every month during the year.  
+							<p style="text-align:center	;">
+							<br>
+								<iframe width="1000" height="700" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~aviationcovideu/97.embed"></iframe>
+							<br>
+							<p style="text-align:justify;">
+							
+							 By looking at the graph from above, we can see that there is an increase of tweets related to cancellations in March and there has been a significant increase of tweets related to refunds from April onwards compared to January and February. At the same time, we can observe how luggage-related tweets have been diluted during the period of inactivity of the airlines. 
+							<br>
+							<br>
+							But now we want to take a look at the distribution of tweets by categories and by airlines over time.  
+
+							<p style="text-align:center	;">
+							<br>
+								<iframe width="1000" height="700" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~aviationcovideu/5.embed"></iframe>
+							<br>
+
+							<p style="text-align:justify;">
+								 By looking at each company in a detailed way, we can see that, for instance, airfrance doesn't follow the common pattern. They have a bigger increase in cancellations than in refunds tweets.<br>
+
+								For SAS, the main topic in March was customer service instead of cancellations or refunds like in the other companies.   <br>
+								<br>
+								 But taking apart individual analysis, we can also see that Lowcost airlines have a bigger part of their tweets identified as refunds. This could mean that they have had more problems paying back their cancellations than other airlines. This is the case of Norwegian, Ryanair, EasyJet, and Vueling. Most of the tweets received by these companies are related to refunds, whereas in the case of SAS, Lufthansa, Airfrance, or Iberia, even though refunds take a big part of the distribution, the different topics are more equally divided than for the lowcost companies.
+								<br>
+								Another insight we can obtain is that for almost all the companies before the cancellations occurred in March, the main discussion topics were Customer Service and Luggage. 
+
+
+							<br>
+						</p>
+							<br>
+							<br>
+								<h2 style="text-align:center;">  SENTIMENT ANALYSIS</h2>
+							<br>
+							<br>
+							<p style="text-align:justify;">
+							Apart from identifying the different categories we wanted to see how sentiment score is for each of the categories and every airline. And we wanted to study it over time in 2020 to see if there has been any relevant change. For this purpose, we analyzed the average sentiment of each tweet using nltk and we have built the following visualization in which the most positive sentiment would take the value of 1 and the most negative sentiment would take the value of -1. 
+							<br>
+							<p style="text-align:center	;">
+							<br>
+								<iframe width="1000" height="700" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~aviationcovideu/7.embed"></iframe>
+							<br>
+							<p style="text-align:justify;">
+							One of the main takeaways that can be identified from this graph is that on average tweets about cancellations are predominantly negative. Tweets about delays, luggage, and price are neutral and tweets about customer service and refunds tend to be positive. <br> 
+                            (Disclaimer: Nltk sentiment analysis doesn't take into account irony &#x1F605; and most of the words that tweets about airlines have are predominantly positive when taking out of context. Words like "fly", "plane" or "holidays" usually have positive weights that could stabilize the balance.) 
+
+				
+							
+							<br>
+							<br>
+
+							 But one thing we can see is if there has been any change over time. In all cases, we find that the average sentiment for tweets related to refunds decreases drastically from March onwards compared to January and February. We can also see the same behavior with cancellations. Although they already show a negative sentiment in January and February, these sentiments decrease after March.  
+
+							<br>
+							 Another thing we can see is that on average, KLM, SAS, and British Airways have the best sentiment valuations for every category. Whereas Ryanair and EasyJet show the lowest sentiment score.
+
+							 <br>
+							 <br>
+
+							 We have seen that indeed there has been a temporal relationship between Twitter user's reflections and the change of the size of the flights' network over time. We have shared with you our insights but we have also designed this webpage to allow you to find your own insights being able to compare between all the interactive graphs. As future work, we propose to see if it is possible to forecast the number of flights for each company depending on the increase or decrease in number of tweets regarding cancellations or refunds. 
+							 </p>
 							
 						</div>
 						
@@ -137,7 +282,7 @@
 			</div>
 		</section><!--/.about-->
 		<!--about end -->
-
+		>
 
 	    <footer id="footer-copyright" class="footer-copyright">
 			<div class="container">
