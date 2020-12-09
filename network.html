@@ -142,6 +142,11 @@
 								The nodes of the networks are the larger airports in Europe and the links represent all the flights between them. Note that the width and the color of the edges account for the number of flights and their airline, respectively.
 								<br>
 								<br>
+								To have a better understanding of the data we added some attributes to our nodes and edges. For the nodes, the size of the bubbles represents the degree of the nodes, i.e. connections of the airports. Furthermore, we decided to group the nodes in different communities, so the colors of the bubbles correspond to the nodes' communities. For the communities partition we used the best partition of community Louvain, which maximises the modularity using Louvain heuristices.
+								<br>
+								For the edges, we coloured the connections according to the 10 selected airlines, and its weight correspond to the number of flights for each connection.
+								<br>
+								<br>
 								By moving the slider the user can compare data from the same month of each year and visualize the difference. As expected, a big drop can be observed from the month of March again. 
 
 							</p>
@@ -170,7 +175,7 @@
 
 							<br>
 							<p>
-								To go deeper in detail we analyze the affectation to 10 of the most important airlines in Europe: Air France, British Airways, Iberia, KLM, Lufthansa, Norwegian, Ryanair, Scandinavian Airlines and Vueling.
+								To go deeper in detail we analyze the affectation to 10 of the most important airlines in Europe: Air France, British Airways, Iberia, KLM, Lufthansa, Norwegian, Ryanair, Scandinavian Airlines, Easyjet and Vueling.
 								<br>
 								For this, we divide the main network into 10, which represent the air traffic for each airline.
 							</p>
