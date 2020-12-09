@@ -98,7 +98,7 @@
 				<div class="row">
 					<div class="col-md-12 text-center">
 						<div class="header-text">
-							<h2><span></span> covid-19 impact on aviation<span>,</span><br> an <span>analytical</span> look into it <br> and how customers reacted <span>.</span>   </h2>
+							<h2> An <span>analytical</span> look into <span>Covid-19</span><br> impact on the aviation industry<span>.</span>   </h2>
 							<p>enjoy the insights</p>
 							<a href="network.html" style="margin-right: 15px;" >NETWORK ANALYSIS</a>
 		                    <a href="twitter.html" style="margin-right: 15px;" >TWITTER ANALYSIS</a>
@@ -122,18 +122,71 @@
 						<div class="single-about-txt">
 							<h3>
 								This webpage is the final project for the course Social graphs and interactions (02805) offered by the Technical University of Denmark. <br>
-								
 							</h3>
 							<p>
-								The topic of this analysis is the impact of Covid-19 on the European Aviation Industry. <br>
-								The analysis is done in two steps: firstly it is analysed the 2020 network evolution compared to 2019. Secondly, it is analysed how customers reacted to the cancellation of flights in Twitter. <br>
-								All the graphics have been designed prioritizing the user experience and the interactivity of them.
-							
+								The project consists of analyzing the impact of the Covid-19 pandemic on the European aviation industry. To have a better perspective of the effect of the pandemic, 2020 data is compared against data from 2019.
 								<br>
 								<br>
-								<iframe width="1100" height="550" src="https://www.youtube.com/embed/CiDO3-pDjWg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								First, we create a network of the european airports connections during the months January to October for 2019 and 2020. 
+								<br>
+								<br>
+								Second, we study how the pandemic has affected the different airlines and how airlines’ users have perceived their handling of the situation. To do so, we have selected 10 of the most important airlines in Europe and analyzed thousands of tweets directed to these airlines.
+								<br>
+								<br>
+								The following video summarizes the central idea of the project, outlines the elements needed for its execution and shows the implementation plan.
+								<br>
+								<br>
 							</p>
-							
+							<p style="text-align:center;">
+								<iframe align="middle" width="1100" height="550" src="https://www.youtube.com/embed/CiDO3-pDjWg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</p>
+							<h4>
+								<br>
+								Datasets
+							</h4>
+							<p>
+								The datasets used for the analysis are:
+								<ul>
+								  <li>Flights dataset. <a href="https://zenodo.org/record/4299838#.X9CIFBNKj8M">Dataset from Zenodo</a>, the data in this dataset is derived and cleaned from the full OpenSky dataset. 
+								  	<a href="https://zenodo.org/record/4299838#.X9CIFBNKj8M">
+								  		<img src="assets/images/zenodo_logo.png" alt="zenodo" width="100" height="100"/>
+								  	</a>
+								  </li>
+								  <li>Airports dataset. <a href="https://ourairports.com/data/">Dataset from ourairports</a> containing all the airports in the world and its corresponding attributes. 
+								  	<a href="https://ourairports.com/data/">
+								  		<img src="assets/images/ourairports_logo.png" alt="ourairports" width="110" height="110"/> 
+								  	</a>
+								  </li>
+								  <li>Tweets dataset. <a href="https://twitter.com">Extraction from twitter</a> containing monthly tweets for 2020 directed to the 10 selected airlines. 
+								  	<a href="https://twitter.com">
+								  		<img src="assets/images/twitter_logo.jpg" alt="twitter" width="70" height="70"/> 
+								  	</a>
+								  </li>
+								</ul>
+							</p>
+							<h4>
+								Tools
+							</h4>
+							<p>
+								The tools used to execute the project are:
+								<ul>
+								  <li>Github. Hosting the <a href="https://github.com/aviationcovideu/aviationcovideu.github.io">code</a> and website. 
+								  	<!--a href="https://zenodo.org/record/4299838#.X9CIFBNKj8M">
+								  		<img src="assets/images/zenodo_logo.png" alt="zenodo" width="100" height="100"/>
+								  	</a-->
+								  </li>
+								  <li>Python and some of its libraries such as Pandas, Networkx, Plotly, snscrape. 
+								  	<!--a href="https://ourairports.com/data/">
+								  		<img src="assets/images/ourairports_logo.png" alt="ourairports" width="110" height="110"/> 
+								  	</a-->
+								  </li>
+								  <li>Google Colab. Running the code. 
+								  	<!--a href="https://twitter.com">
+								  		<img src="assets/images/twitter_logo.jpg" alt="twitter" width="70" height="70"/> 
+								  	</a-->
+								  </li>
+								</ul>
+							</p>
 						</div>
 						
 					</div>

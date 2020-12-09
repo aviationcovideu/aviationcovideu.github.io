@@ -114,59 +114,287 @@
 
 		<section id="intro" class="about">
 			<div class="section-heading text-center">
-				<h2>TWITTER</h2>
+				<h2>NETWORK ANALYSIS</h2>
 			</div>
 			<div class="container">
 				<div class="about-content">
 					<div class="row">						
 						<div class="single-about-txt">
-							<h3>
-								This webpage is the final project for the course Social graphs and interactions (02805) offered by the Technical University of Denmark. <br>
-								
-							</h3>
 							<p>
-								The topic of this analysis is the impact of Covid-19 on the European Aviation Industry. <br>
-								The analysis is done in two steps: firstly it is analysed the 2020 network evolution compared to 2019. Secondly, it is analysed how customers reacted to the cancellation of flights in Twitter. <br>
-								All the graphics have been designed prioritizing the user experience and the interactivity of them.
+								The aim of this section is to have an overview of the impact of Covid-19 on the air traffic in Europe. For this, we analyze data from all the flights in Europe during the months January to October for 2019 and 2020. 
+								<br>
+								<br>
+								The first exploration on our dataset consists of observing the evolution over time of the daily number of flights. To get a smoother trend we calculate the rolling average for the last 7 days, see the red line in the plot.
+								<br>
+								<br>
+								In the plot below, it can be clearly observed a sharp decrease in mid-March 2020, when the first lock-downs in Europe occurred. In the worst period for air traffic, the reduction of flights accounted for roughly 90% less compared to a normal day.
 							</p>
-							<iframe scrolling="no" style="border:none;" seamless="seamless" src="plots/airlines_by_month/VLG_2019.html" height="800" width="1000"></iframe>
+							<p style="text-align:center;">
+								<iframe scrolling="no" style="border:none;" seamless="seamless" src="plots/count_flights_daily.html" height="500" width="800"></iframe>
+							</p>
 							
+							<p>
+								For a better interpretation, the data of flights is represented as a network for each month. 
+								<br>
+								The analysis has been conducted top-to-bottom, therefore the first plot shows all the flights in Europe, whereas the next plots are focused on the selected airlines.
+								<br>
+								<br>
+								The nodes of the networks are the larger airports in Europe and the links represent all the flights between them. Note that the width and the color of the edges account for the number of flights and their airline, respectively.
+								<br>
+								<br>
+								By moving the slider the user can compare data from the same month of each year and visualize the difference. As expected, a big drop can be observed from the month of March again. 
+
+							</p>
+
+							<p>
+								To go deeper in detail we analyze the affectation to 10 of the most important airlines in Europe: Air France, British Airways, Iberia, KLM, Lufthansa, Norwegian, Ryanair, Scandinavian Airlines and Vueling.
+								<br>
+								For this, we divide the main network into 10, which represent the air traffic for each airline.
+							</p>
+
+							<div class="row">
+								<h4>
+									Air France
+								</h4>
+								<div style="float:left;">
+								    <div align="center">
+								        <iframe scrolling="no" style="border:none;" seamless="seamless" src="plots/airlines_by_month/AFR_2019.html" height="400" width="550"></iframe>
+								    </div>
+								    <div style="text-align:center;">
+								        Air France 2019 plot
+								    </div>
+								</div>
+								<div style="float:right;">
+								    <div align="center">
+								        <iframe scrolling="no" style="border:none;" seamless="seamless" src="plots/airlines_by_month/AFR_2020.html" height="400" width="550"></iframe>
+								    </div>
+								    <div style="text-align:center;">
+								        Air France 2020 plot
+								    </div>
+								</div>
+							</div>
+
+							<div class="row">
+								<br>
+								<br>
+								<h4>
+									British Airways
+								</h4>
+								<div style="float:left;">
+								    <div align="center">
+								        <iframe scrolling="no" style="border:none;" seamless="seamless" src="plots/airlines_by_month/BAW_2019.html" height="400" width="550"></iframe>
+								    </div>
+								    <div style="text-align:center;">
+								        British Airways 2019 plot
+								    </div>
+								</div>
+								<div style="float:right;">
+								    <div align="center">
+								        <iframe scrolling="no" style="border:none;" seamless="seamless" src="plots/airlines_by_month/BAW_2020.html" height="400" width="550"></iframe>
+								    </div>
+								    <div style="text-align:center;">
+								        British Airways 2020 plot
+								    </div>
+								</div>
+							</div>
+
+							<div class="row">
+								<br>
+								<br>
+								<h4>
+									Lufthansa
+								</h4>
+								<div style="float:left;">
+								    <div align="center">
+								        <iframe scrolling="no" style="border:none;" seamless="seamless" src="plots/airlines_by_month/DLH_2019.html" height="400" width="550"></iframe>
+								    </div>
+								    <div style="text-align:center;">
+								        Lufthansa 2019 plot
+								    </div>
+								</div>
+								<div style="float:right;">
+								    <div align="center">
+								        <iframe scrolling="no" style="border:none;" seamless="seamless" src="plots/airlines_by_month/DLH_2020.html" height="400" width="550"></iframe>
+								    </div>
+								    <div style="text-align:center;">
+								        Lufthansa 2020 plot
+								    </div>
+								</div>
+							</div>
+
+							<div class="row">
+								<br>
+								<br>
+								<h4>
+									Iberia
+								</h4>
+								<div style="float:left;">
+								    <div align="center">
+								        <iframe scrolling="no" style="border:none;" seamless="seamless" src="plots/airlines_by_month/IBE_2019.html" height="400" width="550"></iframe>
+								    </div>
+								    <div style="text-align:center;">
+								        Iberia 2019 plot
+								    </div>
+								</div>
+								<div style="float:right;">
+								    <div align="center">
+								        <iframe scrolling="no" style="border:none;" seamless="seamless" src="plots/airlines_by_month/IBE_2020.html" height="400" width="550"></iframe>
+								    </div>
+								    <div style="text-align:center;">
+								        Iberia 2020 plot
+								    </div>
+								</div>
+							</div>
+
+							<div class="row">
+								<br>
+								<br>
+								<h4>
+									KLM
+								</h4>
+								<div style="float:left;">
+								    <div align="center">
+								        <iframe scrolling="no" style="border:none;" seamless="seamless" src="plots/airlines_by_month/KLM_2019.html" height="400" width="550"></iframe>
+								    </div>
+								    <div style="text-align:center;">
+								        KLM 2019 plot
+								    </div>
+								</div>
+								<div style="float:right;">
+								    <div align="center">
+								        <iframe scrolling="no" style="border:none;" seamless="seamless" src="plots/airlines_by_month/VLG_2020.html" height="400" width="550"></iframe>
+								    </div>
+								    <div style="text-align:center;">
+								        KLM 2020 plot
+								    </div>
+								</div>
+							</div>
+
+							<div class="row">
+								<br>
+								<br>
+								<h4>
+									Norwegian
+								</h4>
+								<div style="float:left;">
+								    <div align="center">
+								        <iframe scrolling="no" style="border:none;" seamless="seamless" src="plots/airlines_by_month/NAX_2019.html" height="400" width="550"></iframe>
+								    </div>
+								    <div style="text-align:center;">
+								        Norwegian 2019 plot
+								    </div>
+								</div>
+								<div style="float:right;">
+								    <div align="center">
+								        <iframe scrolling="no" style="border:none;" seamless="seamless" src="plots/airlines_by_month/NAX_2020.html" height="400" width="550"></iframe>
+								    </div>
+								    <div style="text-align:center;">
+								        Norwegian 2020 plot
+								    </div>
+								</div>
+							</div>
+
+							<div class="row">
+								<br>
+								<br>
+								<h4>
+									Ryanair
+								</h4>
+								<div style="float:left;">
+								    <div align="center">
+								        <iframe scrolling="no" style="border:none;" seamless="seamless" src="plots/airlines_by_month/RYR_2019.html" height="400" width="550"></iframe>
+								    </div>
+								    <div style="text-align:center;">
+								        Ryanair 2019 plot
+								    </div>
+								</div>
+								<div style="float:right;">
+								    <div align="center">
+								        <iframe scrolling="no" style="border:none;" seamless="seamless" src="plots/airlines_by_month/RYR_2020.html" height="400" width="550"></iframe>
+								    </div>
+								    <div style="text-align:center;">
+								        Ryanair 2020 plot
+								    </div>
+								</div>
+							</div>
+
+							<div class="row">
+								<br>
+								<br>
+								<h4>
+									TBD
+								</h4>
+								<div style="float:left;">
+								    <div align="center">
+								        <iframe scrolling="no" style="border:none;" seamless="seamless" src="plots/airlines_by_month/DLH_2019.html" height="400" width="550"></iframe>
+								    </div>
+								    <div style="text-align:center;">
+								        Lufthansa 2019 plot
+								    </div>
+								</div>
+								<div style="float:right;">
+								    <div align="center">
+								        <iframe scrolling="no" style="border:none;" seamless="seamless" src="plots/airlines_by_month/DLH_2020.html" height="400" width="550"></iframe>
+								    </div>
+								    <div style="text-align:center;">
+								        Lufthansa 2020 plot
+								    </div>
+								</div>
+							</div>
+
+							<div class="row">
+								<br>
+								<br>
+								<h4>
+									TBD
+								</h4>
+								<div style="float:left;">
+								    <div align="center">
+								        <iframe scrolling="no" style="border:none;" seamless="seamless" src="plots/airlines_by_month/VLG_2019.html" height="400" width="550"></iframe>
+								    </div>
+								    <div style="text-align:center;">
+								        Vueling 2019 plot
+								    </div>
+								</div>
+								<div style="float:right;">
+								    <div align="center">
+								        <iframe scrolling="no" style="border:none;" seamless="seamless" src="plots/airlines_by_month/VLG_2020.html" height="400" width="550"></iframe>
+								    </div>
+								    <div style="text-align:center;">
+								        Vueling 2020 plot
+								    </div>
+								</div>
+							</div>
+
+							<div class="row">
+								<br>
+								<br>
+								<h4>
+									Vueling
+								</h4>
+								<div style="float:left;">
+								    <div align="center">
+								        <iframe scrolling="no" style="border:none;" seamless="seamless" src="plots/airlines_by_month/VLG_2019.html" height="400" width="550"></iframe>
+								    </div>
+								    <div style="text-align:center;">
+								        Vueling 2019 plot
+								    </div>
+								</div>
+								<div style="float:right;">
+								    <div align="center">
+								        <iframe scrolling="no" style="border:none;" seamless="seamless" src="plots/airlines_by_month/VLG_2020.html" height="400" width="550"></iframe>
+								    </div>
+								    <div style="text-align:center;">
+								        Vueling 2020 plot
+								    </div>
+								</div>
+							</div>
+
+							<br>
+							<br>
+							Now, let’s go to Twitter and analyze what the users have been tweeting about these airlines during this period of time. <a href="twitter.html">Go to Twitter page</a>
 						</div>
-						
 					</div>
-
-
-
-					<div class="row">						
-						<div class="single-about-txt">
-	
-							<iframe scrolling="yes" style="border:none;" seamless="seamless" src="plots/airlines_by_month/VLG_2019.html" height = "100%" width="50%"></iframe>
-							<iframe id="right_iframe" scrolling="no" style="border:none;" seamless="seamless" src="plots/airlines_by_month/VLG_2019.html"></iframe>
-							
-						</div>
-						
-					</div>
-
-
-
-
-					<div style="float:left;">
-					    <div align="center">
-					        <iframe scrolling="no" style="border:none;" seamless="seamless" src="plots/airlines_by_month/VLG_2019.html" height="100%"></iframe>
-					    </div>
-					    <div style="text-align:center;">
-					        Vueling 2019 plot
-					    </div>
-					</div>
-					<div style="float:right;">
-					    <div align="center">
-					        <iframe scrolling="no" style="border:none;" seamless="seamless" src="plots/airlines_by_month/VLG_2019.html" height="100%"></iframe>
-					    </div>
-					    <div style="text-align:center;">
-					        Vueling 2019 plot
-					    </div>
-					</div>
-
 				</div>
 			</div>
 		</section><!--/.about-->
